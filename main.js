@@ -262,7 +262,7 @@ var vm = new Vue({
 
         if (!_.isEmpty(this.filteredResults)) {
           if (trade.r > 0 && !this.filteredResults.includes('Win')) return false;
-          if (trade.r == 0 && !this.filteredResults.includes('Break even')) return false;
+          if (0 > trade.r > -0.45 && !this.filteredResults.includes('Break even')) return false;
           if (trade.r < 0 && !this.filteredResults.includes('Loss')) return false;
         }
 
